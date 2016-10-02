@@ -25,9 +25,6 @@ var irobotCommand=io.of('/irobotCommand').on('connection',function(socket){
 	socket.on('message', function(data) {
 		console.log(data);
 		commands[data.id]();
-
-
-
 	    });
     });
 
@@ -83,6 +80,11 @@ function drive(right, left) {
   debug(buf.toJSON().data.toString());
 }
 
+function main() {
+    port.write(Buffer.from([128]));
+    port.write(Buffer.from([131]));
+}
+
   var commands=[
     () => { drive(-20, -20); setTimeout(() => { drive(0,0) }, 500)},
     () => { drive(20, 20); setTimeout(() => { drive(0,0) }, 500)},
@@ -100,67 +102,6 @@ function drive(right, left) {
     //drive,
     () => { close() }
  ];
-
-
-function main() {
-  port.write(Buffer.from([128]));
-  port.write(Buffer.from([131]));
-  //back();
-
-    
- // const repl = Repl.start("==> ").context.r = {
-
-      //commands[0]();
-  
-}
-
-function back(){
-    drive(-20, -20); 
-    setTimeout(() => { drive(0,0) }, 500);
-}
-
-function forward(){
-    drive(20, 20); 
-    setTimeout(() => { drive(0,0) }, 500);
-}
-
-function left(){
-    drive(-20, 20); 
-    setTimeout(() => { drive(0,0) }, 500);
-}
-
-function right(){
-    drive(20, -20); 
-    setTimeout(() => { drive(0,0) }, 500);
-}
-
-function reset(){
-    port.write(Buffer.from([7]));
-}
-
-function full(){
-    port.write(Buffer.from([132]));
-}
-
-function safe(){
-    port.write(Buffer.from([131]));
-}
-
-function passive(){
-    port.write(Buffer.from([128]));
-}
-
-function lightOn(){
-    port.write(Buffer.from([139, 0, 125, 255]));
-}
-
-function lightOff(){
-    port.write(Buffer.from([139, 0, 0, 0]));
-}
-
-function beep(){
-    port.write(Buffer.from([140, 3, 1, 64, 16, 141, 3]));
-}
 
 
 function getAvailableDevicePaths() {
