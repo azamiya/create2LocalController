@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="icon" type="image/png" href="../favicon.ico" />
+<script src="/socket.io/socket.io.js"></script>
 <script type="text/javascript" src="./arrowkey.js"></script>
 <style>
 table, th, td {
@@ -13,11 +14,33 @@ table, th, td {
     font-weight: bold;
     background-color: yellow;
 }
+button{
+		background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 </style>
 </head>
 <body>
+	<h1>Controll irobot create2 using Node.js</h1>
+	<hr>
+	<button onclick="Reset()">Reset</button>
+  <button onclick="Passive()">Passive</button>
+  <button onclick="Safe()">safe</button>
+  <button onclick="Full()">full</button>
+  <button onclick="Beep()">beep</button>
+  <button onclick="Close()">close</button>
+  <hr>
+
   <!--display keypad-->
-	<table style="width:30%">
+	<table style="width:50%">
 	  <tr>
 	    <th></th>
 	    <th id="forward">&#8673;</th> 

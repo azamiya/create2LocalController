@@ -13,6 +13,11 @@ function start(app, http) {
 	    res.sendFile(__dirname + "/client/create2Tutorial/index.html")
 	});
 
+	app.get('/arrowKeypad', function(req, res) {
+	    res.sendFile(__dirname + "/client/arrowKeypad/index.html")
+	});
+
+
 	http.listen(PORT, function(){
 	  console.log('Listen on ',PORT);
 	});

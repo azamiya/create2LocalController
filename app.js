@@ -10,7 +10,7 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const server = require("./server");
 
-app.use(express.static(__dirname + 'client'));
+app.use(express.static(__dirname + '/client'));
 server.start(app, http);
 
 const irobotCommand = require("./irobotConnect.js");
