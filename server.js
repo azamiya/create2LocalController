@@ -1,4 +1,4 @@
-var PORT = 3322;
+var PORT = 3332;
 
 function start(app, http) {
 	app.get('/', function(req, res) {

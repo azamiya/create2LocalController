@@ -3,6 +3,7 @@ const SerialPort = require("serialport");
 const fs = require("fs");
 const debug = require("debug")("create2:driver");
 const Repl = require("repl");
+
 const express = require('express');
 const app = express();
 const http = require('http').Server(app);
@@ -13,4 +14,4 @@ app.use(express.static(__dirname + 'client'));
 server.start(app, http);
 
 const irobotCommand = require("./irobotConnect.js");
-irobotCommand.start(io);
+irobotCommand.start(io, fs, debug);
