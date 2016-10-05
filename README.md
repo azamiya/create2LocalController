@@ -13,7 +13,7 @@ $ npm start
 ```
 
 ### Index ###
-* Gamepad Tutorial  
+* **Gamepad Tutorial**  
 just try to connect gamepad(xbox controller)
 * iRobot create2 control tutorial  
 control iRobot create2 using web controller
