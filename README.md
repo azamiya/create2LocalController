@@ -11,7 +11,7 @@ $ cd create2LocalController
 $ npm install
 $ npm start
 ```
-browse [localhost:](http://localhost:3322)
+browse [localhost:3322](http://localhost:3322)
 
 ### Contribution guidelines ###
 
