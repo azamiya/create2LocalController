@@ -11,7 +11,15 @@ $ cd create2LocalController
 $ npm install
 $ npm start
 ```
-browse [localhost:3322](http://localhost:3322)
+
+### Index ###
+#localhost:PORT - Index
+* Gamepad Tutorial
+just try to connect gamepad(xbox controller)
+* iRobot create2 control tutorial
+control iRobot create2 using web controller
+* Control create2 via arrow keypad in standalone
+control iRobot create2 using arrow keypad controller
 
 ### Contribution guidelines ###
 
