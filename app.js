@@ -3,34 +3,15 @@ const SerialPort = require("serialport");
 const fs = require("fs");
 const debug = require("debug")("create2:driver");
 const Repl = require("repl");
-var express = require('express'),
-    app = express();
-
-//app.set('port', (process.env.PORT || 3322));
-
-//socket.io
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-var PORT = 3322;
+const express = require('express');
+const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+const server = require("./server");
 
 app.use(express.static(__dirname + 'client'));
 
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + "/client/index.html")
-});
-
-app.get('/padTutorial', function(req, res) {
-    res.sendFile(__dirname + "/client/padTutorial/index.html")
-});
-
-app.get('/create2Tutorial', function(req, res) {
-    res.sendFile(__dirname + "/client/create2Tutorial/index.html")
-});
-
-http.listen(PORT, function(){
-  console.log('Listen on ',PORT);
-});
-
+server.start(app, http);
 
 var irobotCommand=io.of('/irobotCommand').on('connection',function(socket){
 	socket.on('message', function(data) {
