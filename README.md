@@ -20,4 +20,4 @@ browse [localhost:3322](http://localhost:3322)
 * Other guidelines
 
 ### References ###
-[gamepadtest](https://github.com/luser/gamepadtest "gamepad Test sample") 
+[gamepadtest](https://github.com/luser/gamepadtest "https://github.com/luser/gamepadtest") 
