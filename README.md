@@ -11,22 +11,22 @@ $ cd create2LocalController
 $ npm install
 $ npm start
 ```
-[Imgur](http://i.imgur.com/aJfFBV7.png)
+![Imgur](http://i.imgur.com/aJfFBV7.png)
 ### Index ###
 * **Gamepad Tutorial** 
 ![gamepadPic](http://i.imgur.com/qKIoVA2.jpg)  
 just try to connect gamepad(xbox controller)  
-[Imgur](http://i.imgur.com/aJfFBV7.png)
+![Imgur](http://i.imgur.com/aJfFBV7.png)
 
 * **iRobot create2 controller tutorial**  
 ![botTutorial](http://i.imgur.com/RznHmXQ.png)  
 control iRobot create2 using web controller  
-[Imgur](http://i.imgur.com/aJfFBV7.png)  
+![Imgur](http://i.imgur.com/aJfFBV7.png)  
 
 * **Control create2 via arrow keypad in standalone** 
 ![arrowController](http://i.imgur.com/Y2r1Xnl.png)  
 control iRobot create2 using arrow keypad controller  
-[Imgur](http://i.imgur.com/aJfFBV7.png)  
+![Imgur](http://i.imgur.com/aJfFBV7.png)  
 
 * **Control create2 via internet using peerJS ver0** 
 ![recieverV0](http://imgur.com/a/Hcvg5)  
@@ -38,7 +38,7 @@ and this is also operator's repository
 1. set your peer ID  
 1. wait for calling  
 (also you can control iRobot create2 using button and pad)  
-[Imgur](http://i.imgur.com/aJfFBV7.png)  
+![Imgur](http://i.imgur.com/aJfFBV7.png)  
 
 
 ### References ###
