@@ -21,6 +21,10 @@ function start(app, http) {
 	    res.sendFile(__dirname + "/client/peerReciever/index.html")
 	});
 
+	app.get('/videoReceiver', function(req, res) {
+	    res.sendFile(__dirname + "/client/videoReceiver/index.html")
+	});
+
 	http.listen(PORT, function(){
 	  console.log('Listen on ',PORT);
 	});

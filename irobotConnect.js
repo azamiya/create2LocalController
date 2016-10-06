@@ -69,10 +69,10 @@ function start(io, fs, debug){
 		}
 
 		  var commands=[
-		    () => { drive(-20, -20); setTimeout(() => { drive(0,0) }, 500)},
-		    () => { drive(20, 20); setTimeout(() => { drive(0,0) }, 500)},
-		    () => { drive(-20, 20); setTimeout(() => { drive(0,0) }, 500)},
-		    () => { drive(20, -20); setTimeout(() => { drive(0,0) }, 500)},
+		    () => { drive(-255, -255); setTimeout(() => { drive(0,0) }, 500)},
+		    () => { drive(255, 255); setTimeout(() => { drive(0,0) }, 500)},
+		    () => { drive(-80, 80); setTimeout(() => { drive(0,0) }, 500)},
+		    () => { drive(80, -80); setTimeout(() => { drive(0,0) }, 500)},
 		    () => { port.write(Buffer.from([7])) },
 		    () => { port.write(Buffer.from([132])) },
 		    () => { port.write(Buffer.from([131])) },
