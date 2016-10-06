@@ -16,7 +16,7 @@ var commandList = {
   "Passive" : 7,
   "Beep" : 10,
   "Close" : 11,
-  "Stop" :12
+  "Stop" : 12
 }
 
 var irobotCommand = io.connect('http://localhost:3332/irobotCommand');

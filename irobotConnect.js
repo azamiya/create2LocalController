@@ -84,7 +84,7 @@ function start(io, fs, debug){
 		    //(str) => {var a = str.split("").map((c) => {return  c.charCodeAt();}); a.unshift(164); port.write(Buffer.from(a)); },
 		    //drive,
 		    () => { close() },
-		    () => {drive(0,0); }
+		    () => { drive(0,0); }
 		 ];
 
 
