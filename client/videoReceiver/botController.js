@@ -15,7 +15,8 @@ var commandList = {
   "Safe" : 6,
   "Passive" : 7,
   "Beep" : 10,
-  "Close" : 11
+  "Close" : 11,
+  "Stop" : 12
 }
 
 var irobotCommand = io.connect('http://localhost:3332/irobotCommand');
@@ -68,4 +69,8 @@ function Beep(){
 
 function Close(){
   irobotCommand.emit("message",{id : commandList["Close"]});
+}
+
+function Stop(){
+  irobotCommand.emit("message",{id : commandList["Stop"]});
 }

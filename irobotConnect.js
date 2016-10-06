@@ -69,10 +69,10 @@ function start(io, fs, debug){
 		}
 
 		  var commands=[
-		    () => { drive(-255, -255); setTimeout(() => { drive(0,0) }, 500)},
-		    () => { drive(255, 255); setTimeout(() => { drive(0,0) }, 500)},
-		    () => { drive(-80, 80); setTimeout(() => { drive(0,0) }, 500)},
-		    () => { drive(80, -80); setTimeout(() => { drive(0,0) }, 500)},
+		    () => { drive(-255, -255); },
+		    () => { drive(255, 255); },
+		    () => { drive(-80, 80); },
+		    () => { drive(80, -80); },
 		    () => { port.write(Buffer.from([7])) },
 		    () => { port.write(Buffer.from([132])) },
 		    () => { port.write(Buffer.from([131])) },
@@ -83,7 +83,8 @@ function start(io, fs, debug){
 		    () => { port.write(Buffer.from([140, 3, 1, 64, 16, 141, 3])) },
 		    //(str) => {var a = str.split("").map((c) => {return  c.charCodeAt();}); a.unshift(164); port.write(Buffer.from(a)); },
 		    //drive,
-		    () => { close() }
+		    () => { close() },
+		    () => { drive(0,0); }
 		 ];
 
 
