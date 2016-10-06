@@ -9,6 +9,10 @@ function start(app, http) {
 	    res.sendFile(__dirname + "/client/padTutorial/index.html")
 	});
 
+	app.get('/padTest', function(req, res) {
+	    res.sendFile(__dirname + "/client/padTest/index.html")
+	});
+
 	app.get('/create2Tutorial', function(req, res) {
 	    res.sendFile(__dirname + "/client/create2Tutorial/index.html")
 	});
