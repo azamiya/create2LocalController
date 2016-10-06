@@ -26,8 +26,8 @@ control iRobot create2 using arrow keypad controller
 ![recieverV0](http://imgur.com/a/Hcvg5)  
 control iRobot create2 from operator    
 [https://crosskeysample.herokuapp.com/create2RemoteController_v0/](https://crosskeysample.herokuapp.com/create2RemoteController_v0/)  
-and this is operator's repository
-[https://github.com/cdra0624/telecreate2](https://github.com/cdra0624/telecreate2)  
+and this is operator's repository  
+[http://i.imgur.com/mCb7BTu.png](http://i.imgur.com/mCb7BTu.png)   
 1. set your peer ID  
 2. wait for calling  
 (also you can control iRobot create2 using button and pad)  
