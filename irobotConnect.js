@@ -2,12 +2,17 @@ const SerialPort = require("serialport");
 const fs = require("fs");
 const debug = require("debug")("create2:driver");
 const Repl = require("repl");
+var preDataId = '';
+
 
 function start(io, fs, debug){
 	var irobotCommand = io.of('/irobotCommand').on('connection',function(socket){
 		socket.on('message', function(data) {
-			console.log(data);
-			commands[data.id]();
+			if(data.id != preDataId){
+			    console.log(data);
+			    commands[data.id]();
+			    preDataId=data.id;
+			}
 		});
 	});
 
