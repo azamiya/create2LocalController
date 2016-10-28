@@ -1,4 +1,4 @@
-//"use strict";
+"use strict";
 const SerialPort = require("serialport");
 const fs = require("fs");
 const debug = require("debug")("create2:driver");
