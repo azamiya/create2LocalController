@@ -3,6 +3,7 @@ const SerialPort = require("serialport");
 const fs = require("fs");
 const debug = require("debug")("create2:driver");
 const Repl = require("repl");
+var commands = [];
 
 function start(io, fs, debug){
 	var irobotCommand = io.of('/irobotCommand').on('connection',function(socket){
@@ -71,7 +72,7 @@ function start(io, fs, debug){
 		    port.write(Buffer.from([131]));
 		}
 
-		  var commands=[
+		  commands=[
 		    () => { drive(-255, -255); },
 		    () => { drive(255, 255); },
 		    () => { drive(-80, 80); },
