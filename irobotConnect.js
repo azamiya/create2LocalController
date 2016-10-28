@@ -13,7 +13,7 @@ function start(io, fs, debug){
 		});
 	});
 
-		const path = getAvailableDevicePaths()[0];
+		/*const path = getAvailableDevicePaths()[0];
 		if (!path) {
 		  return "Device cannot use";
 		}
@@ -23,9 +23,10 @@ function start(io, fs, debug){
 		  dataBits:8,
 		  parity:'none', stopBits:1,
 		  flowControl:false
-		};
+		};*/
 		//const port = new SerialPort(path, options);
 		const port = new SerialPort("/dev/ttyUSB0", options);
+		console.log(port);
 
 
 		let inputBuffer = null;
