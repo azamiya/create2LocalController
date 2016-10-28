@@ -9,8 +9,7 @@ function start(io, fs, debug){
 	var irobotCommand = io.of('/irobotCommand').on('connection',function(socket){
 		socket.on('message', function(data) {
 			console.log(data);
-			//commands[data.id]();
-			port.write(Buffer.from([7]))
+			commands[data.id]();
 		});
 	});
 
@@ -25,8 +24,8 @@ function start(io, fs, debug){
 		  parity:'none', stopBits:1,
 		  flowControl:false
 		};
-		//const port = new SerialPort(path, options);
-		const port = new SerialPort("/dev/ttyAMA0", options);
+		const port = new SerialPort(path, options);
+		//const port = new SerialPort("/dev/ttyAMA0", options);
 
 
 		let inputBuffer = null;
@@ -49,6 +48,7 @@ function start(io, fs, debug){
 
 		port.on("open", () => {
 		  debug("connected");
+		  console.log("port.on");
 		  main();
 		});
 
