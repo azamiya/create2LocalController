@@ -23,7 +23,9 @@ function start(io, fs, debug){
 		  parity:'none', stopBits:1,
 		  flowControl:false
 		};
-		const port = new SerialPort(path, options);
+		//const port = new SerialPort(path, options);
+		const port = new SerialPort("/dev/ttyUSB0", options);
+
 
 		let inputBuffer = null;
 
