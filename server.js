@@ -1,3 +1,4 @@
+"use strict"
 var PORT = 3332;
 
 function start(app, http) {
