@@ -8,7 +8,7 @@ function start(io, fs, debug){
 	var irobotCommand = io.of('/irobotCommand').on('connection',function(socket){
 		socket.on('message', function(data) {
 			console.log(data);
-			//commands[data.id]();
+			commands[data.id]();
 		});
 	});
 
