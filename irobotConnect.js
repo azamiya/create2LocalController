@@ -25,7 +25,7 @@ function start(io, fs, debug){
 		  flowControl:false
 		};
 		//const port = new SerialPort(path, options);
-		const port = new SerialPort("/dev/ttyUSB0", options);
+		const port = new SerialPort("/dev/ttyAMA0", options);
 
 
 		let inputBuffer = null;
