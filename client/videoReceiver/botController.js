@@ -43,6 +43,7 @@ function convertData(data) {
 document.addEventListener("keydown", function (e) {
   keyPressed(e.which, true);
 });
+
 document.addEventListener("keyup", function (e) {
   keyPressed(e.which, false);
 });
